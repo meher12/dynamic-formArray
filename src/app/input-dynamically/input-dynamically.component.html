@@ -1,0 +1,57 @@
+
+<form #addressForm="ngForm" class="container mt-3" (ngSubmit)="logValue()">
+    <div class="row justify-content-center">
+      <div class="col-6">
+          <button type="button" class="btn btn-primary mb-2" (click)="addAddress()">Add Address</button>
+        <section class="container border mb-4 p-3" *ngFor="let address of addresses; let i = index;">
+          <div class="row">
+            <div class="col-6">
+                <h4>Address {{i + 1}}</h4>
+            </div>
+            <div class="col-6 text-right">
+                <button type="button" class="btn btn-danger btn-sm" (click)="removeAddress(i)">Remove</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Address</label>
+                    <input type="text" class="form-control" [(ngModel)]="address.address" name="address_{{address.id}}" placeholder="St. Thomas Apartment"/>
+                  </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Street</label>
+                    <input type="text" class="form-control" [(ngModel)]="address.street" name="street_{{address.id}}" placeholder="South Street"/>
+                  </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" class="form-control" [(ngModel)]="address.city" name="city_{{address.id}}" placeholder="Mumbai"/>
+                  </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Country</label>
+                    <select class="form-control" [(ngModel)]="address.country" name="country_{{address.id}}" placeholder="India">
+                      <option value="india">India</option>
+                      <option value="usa">USA</option>
+                      <option value="england">England</option>
+                    </select>
+                  </div>
+            </div>
+          </div>
+        </section>
+  
+        <div class="text-right">
+            <input type="submit" class="btn btn-success" value="Submit"/>
+        </div>
+        
+      </div>
+    </div>
+  
+  </form>
