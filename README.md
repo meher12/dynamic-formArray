@@ -1,6 +1,8 @@
 # Using FormArray to create building blocks of forms with FormControl in Angular 13
 
-## create dynamic add more input fields example using FormArray in Angular.
+## Add more input fields example using FormArray in Angular.
+
+ - dynamically add input fields in angular
 
 - run your application using following command:
   ng serve -o
