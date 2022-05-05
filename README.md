@@ -4,3 +4,5 @@
 
 - run your application using following command:
   ng serve -o
+
+  [![dynamicform.png](https://i.postimg.cc/W1t0ScC1/dynamicform.png)](https://postimg.cc/ZWt9K2JG)
